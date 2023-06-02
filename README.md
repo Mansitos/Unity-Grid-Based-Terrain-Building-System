@@ -1,4 +1,4 @@
-# **Terrain Grid-Based Building System for Unity3D**
+# **Grid-Based Terrain Building System for Unity3D**
 
 ⚠️ **Work In Progress**
 
