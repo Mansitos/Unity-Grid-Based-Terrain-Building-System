@@ -12,7 +12,7 @@ public class ObjectDrag : MonoBehaviour
         mouseOffset = transform.position - BuildingSystem.GetMouseWorldPosition();
     }
 
-    private void OnMouseDrag()
+    private void Update()
     {
         Vector3 pos = BuildingSystem.GetMouseWorldPosition() + mouseOffset;
         transform.position = BuildingSystem.instance.SnapCoordinateToGrid(pos);
