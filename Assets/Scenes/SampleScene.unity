@@ -228,6 +228,7 @@ GameObject:
   - component: {fileID: 963194228}
   - component: {fileID: 963194227}
   - component: {fileID: 963194226}
+  - component: {fileID: 963194229}
   m_Layer: 0
   m_Name: Main Camera
   m_TagString: MainCamera
@@ -301,14 +302,37 @@ Transform:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 963194225}
-  m_LocalRotation: {x: 0.3700048, y: -0.38727155, z: 0.14390327, w: 0.8321112}
+  m_LocalRotation: {x: 0.38302222, y: -0.38302222, z: 0.17860618, w: 0.82139385}
   m_LocalPosition: {x: 15.51, y: 20.07, z: -13.86}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
   m_Father: {fileID: 0}
   m_RootOrder: 0
-  m_LocalEulerAnglesHint: {x: 46.655, y: -51.613, z: -3.934}
+  m_LocalEulerAnglesHint: {x: 50, y: -50, z: 0}
+--- !u!114 &963194229
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 963194225}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 2d4d9e695a4b930448bdb732f47924cd, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  moveSpeed: 10
+  zoomSpeed: 21
+  rotateSpeed: 16
+  minZoom: 32
+  maxZoom: 50
+  upKey: 119
+  downKey: 115
+  leftKey: 97
+  rightKey: 100
+  lookPointLayer: terrain_main_plane
+  redBlockPrefab: {fileID: 8002200706816828015, guid: 7f2048159d604004d8da4ac30782b88e, type: 3}
 --- !u!1 &1598364736
 GameObject:
   m_ObjectHideFlags: 0
@@ -13979,9 +14003,9 @@ GameObject:
   - component: {fileID: 1804553952}
   - component: {fileID: 1804553951}
   - component: {fileID: 1804553950}
-  m_Layer: 0
+  m_Layer: 7
   m_Name: Terrain
-  m_TagString: Untagged
+  m_TagString: terrain_main_plane
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0

@@ -37,15 +37,15 @@ public class BuildingSystem : MonoBehaviour
     private void Update()
     {
 
-        if (Input.GetKeyDown(KeyCode.A))
+        if (Input.GetKeyDown(KeyCode.Keypad0))
         {
             InitializeWithObject(prefab1);
         }
-        else if (Input.GetKeyDown(KeyCode.B))
+        else if (Input.GetKeyDown(KeyCode.Keypad1))
         {
             InitializeWithObject(prefab2);
         }
-        else if (Input.GetKeyDown(KeyCode.C))
+        else if (Input.GetKeyDown(KeyCode.Keypad2))
         {
             InitializeWithObject(prefab3);
         }
