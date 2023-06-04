@@ -9,6 +9,8 @@ public class PlacebleObject : MonoBehaviour
     public Vector3Int Size { get; private set; }
     private Vector3[] Vertices;
 
+    public BoundsInt area;
+
     private void GetColliderVertexPositionsLocal()
     {
         BoxCollider b = gameObject.GetComponent<BoxCollider>();
@@ -31,7 +33,7 @@ public class PlacebleObject : MonoBehaviour
 
         Size = new Vector3Int(Mathf.Abs((vertices[0] - vertices[1]).x)+1,
                               Mathf.Abs((vertices[0] - vertices[3]).y)+1,
-                              1);
+                              1); // needed to be 1
 
         Debug.Log("Building Size (x,y,z):" + Size.ToString());
     }
@@ -41,10 +43,21 @@ public class PlacebleObject : MonoBehaviour
         return transform.TransformPoint(Vertices[0]);
     }
 
-    private void Start()
+    private void Awake()
     {
         GetColliderVertexPositionsLocal();
+    }
+
+
+    private void Start()
+    {
         CalculateSizeInCells();
+        InitialiseArea();
+    }
+
+    private void InitialiseArea()
+    {
+        area = new BoundsInt(new Vector3Int(0, 0, 0), Size);
     }
 
     public virtual void Place()

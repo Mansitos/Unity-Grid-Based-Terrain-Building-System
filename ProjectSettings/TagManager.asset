@@ -39,6 +39,12 @@ TagManager:
   - 
   - 
   m_SortingLayers:
+  - name: indication_tilemap
+    uniqueID: 4151014143
+    locked: 0
+  - name: terrain_main_tilemap
+    uniqueID: 1987998587
+    locked: 0
   - name: Default
     uniqueID: 0
     locked: 0
